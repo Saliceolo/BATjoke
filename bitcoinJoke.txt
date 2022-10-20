@@ -1,0 +1,61 @@
+@echo off
+cd..
+cd..
+
+
+:1
+	color 0a
+	echo.
+	echo.
+	echo =================================
+	echo ===                           ===
+	echo ===    BLOCKCHAIN SURFER      ===
+	echo ===                           ===
+	echo =================================
+	echo.
+	echo.
+	timeout /t 5 /nobreak >nul
+	set loop1=0
+	set loop2=0
+	:loop1
+		echo DATA %loop1% : %random% %random% %random% %random% %random%
+		timeout /t 1 /nobreak >nul
+		set /a loop1=%loop1%+1 
+		if "%loop1%"=="10" echo. && echo ===== ROW 1 COMPLETED ===== && echo. && timeout /t 3 /nobreak >nul &&goto loop2
+		goto loop1
+	:loop2
+		echo DATA %loop2% : %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+		timeout /t 1 /nobreak >nul
+		set /a loop2=%loop2%+1
+		if "%loop2%"=="10" goto loop3
+		goto loop2
+	:loop3
+		color CF
+		cls
+		echo.
+		echo.
+		echo =================================
+		echo ===                           ===
+		echo ===    BLOCKCHAIN UNLOCKED    ===
+		echo ===                           ===
+		echo =================================
+		echo.
+		echo.
+		timeout /t 5 /nobreak >nul
+		color FC
+		cls
+		echo.
+		echo.
+		echo =================================
+		echo ===                           ===
+		echo ===    UNLOCKING BITCOIN      ===
+		echo ===                           ===
+		echo =================================
+		echo.
+		echo.
+		timeout	/t 5 /nobreak >nul
+		cls
+		tree
+		cls
+		
+GOTO 1
